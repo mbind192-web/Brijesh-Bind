@@ -1,1 +1,187 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Public School</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #172554;
+}
+header {
+  background: #123c75;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+header h1 {
+  margin: 5px;
+  font-size: 24px;
+}
+header p {
+  margin: 8px;
+}
+.container {
+  padding: 16px;
+}
+.welcome {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px #00000012;
+}
+.card span {
+  font-size: 30px;
+}
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.card p {
+  font-size: 12px;
+  color: #64748b;
+}
+section {
+  background: white;
+  padding: 16px;
+  margin-top: 18px;
+  border-radius: 14px;
+}
+button {
+  background: #123c75;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+footer {
+  background: #123c75;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div style="font-size:40px">🏫</div>
+  <h1>National Public School</h1>
+  <p>शिक्षा ही सफलता की कुंजी है</p>
+</header>
+
+<div class="container">
+
+<div class="welcome">
+  <h2>नमस्कार! 🙏</h2>
+  <p>National Public School के स्मार्ट स्कूल ऐप में आपका स्वागत है।</p>
+  <p><b>हमारा लक्ष्य:</b> बेहतर शिक्षा, बेहतर भविष्य।</p>
+</div>
+
+<h2>📚 स्कूल सुविधाएँ</h2>
+
+<div class="grid">
+
+<div class="card" onclick="showInfo('notice')">
+<span>📢</span>
+<h3>सूचनाएँ</h3>
+<p>स्कूल की नई जानकारी</p>
+</div>
+
+<div class="card" onclick="showInfo('homework')">
+<span>📖</span>
+<h3>होमवर्क</h3>
+<p>दैनिक गृहकार्य</p>
+</div>
+
+<div class="card" onclick="showInfo('attendance')">
+<span>📝</span>
+<h3>उपस्थिति</h3>
+<p>छात्र उपस्थिति</p>
+</div>
+
+<div class="card" onclick="showInfo('timetable')">
+<span>🕒</span>
+<h3>समय सारणी</h3>
+<p>कक्षा का टाइम टेबल</p>
+</div>
+
+<div class="card" onclick="showInfo('result')">
+<span>🏆</span>
+<h3>परीक्षा परिणाम</h3>
+<p>रिजल्ट की जानकारी</p>
+</div>
+
+<div class="card" onclick="showInfo('gallery')">
+<span>📸</span>
+<h3>फोटो गैलरी</h3>
+<p>स्कूल की तस्वीरें</p>
+</div>
+
+</div>
+
+<section id="details">
+<h2>📌 महत्वपूर्ण जानकारी</h2>
+<p>स्कूल से संबंधित जानकारी यहाँ दिखाई जाएगी।</p>
+</section>
+
+<section>
+<h2>📞 संपर्क करें</h2>
+<p>National Public School</p>
+<p>अधिक जानकारी के लिए स्कूल कार्यालय से संपर्क करें।</p>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 National Public School</p>
+<p>हमारा विद्यालय, हमारा गौरव</p>
+</footer>
+
+<script>
+function showInfo(type) {
+  const details = document.getElementById("details");
+
+  const data = {
+    notice: ["📢 सूचनाएँ", "अभी कोई नई सूचना उपलब्ध नहीं है।"],
+    homework: ["📖 होमवर्क", "अभी कोई गृहकार्य उपलब्ध नहीं है।"],
+    attendance: ["📝 उपस्थिति", "उपस्थिति की जानकारी जल्द उपलब्ध होगी।"],
+    timetable: ["🕒 समय सारणी", "कक्षा की समय सारणी जल्द उपलब्ध होगी।"],
+    result: ["🏆 परीक्षा परिणाम", "परीक्षा परिणाम जल्द उपलब्ध होंगे।"],
+    gallery: ["📸 फोटो गैलरी", "स्कूल की तस्वीरें जल्द उपलब्ध होंगी।"]
+  };
+
+  details.innerHTML =
+    "<h2>" + data[type][0] + "</h2><p>" +
+    data[type][1] + "</p>";
+
+  details.scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+  </html>
+
